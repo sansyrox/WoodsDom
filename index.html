@@ -12,6 +12,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
@@ -38,13 +39,25 @@
     </ul>
   </div> 
 </nav>
-<div class="middle">
+<div class="middle" id="fadeout">
   <h3 style="margin-top: 20%; margin-left: 40%; font-size: 10rem; color: aliceblue;">Hi,</h3>
   <h4 style="margin-top: 5%; margin-left: 15%; font-size: 4rem; color: #05ab4d;">Welcome to WoodsDOM</h4>>
   <h4 style="margin-top: -2px; margin-left: 19%; font-size: 3rem; color: aliceblue;">Your Complete Forest Guide.</h4>>
   <br>
   <!-- <h4>We got you covered.</h4> -->
 </div>
+
+<div id="map" style=" margin-left:5%; height: 900px; width: 900px; ;"></div>
 </body>
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJeovXHbISjF4JgBP--nGXwvvTYLokA1I&callback=initMap" type="text/javascript"></script>
 <script type="text/JavaScript" src="index.js"></script>
 </html>

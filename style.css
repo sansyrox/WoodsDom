@@ -5,3 +5,8 @@
 #collapse12 {
     background-color: #e84c13;
 }
+
+#map {
+    display: none;
+    margin-top: 5%;
+}
