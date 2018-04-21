@@ -1,10 +1,35 @@
 const API_KEY = 'AIzaSyCuVdfqTn6ahF6u-sPWYVL8Mvis6PGwa7g';
 const url = 'https://www.googleapis.com/geolocation/v1/geolocate?key=';
-
-$(document).ready(function(){
-    $(".middle").fadeOut(200).then($("#map").fadeIn(2000));
-});
 var map, infoWindow;
+var navlink1 = document.getElementById("nav-link1");
+var navlink2 = document.getElementById("nav-link2");
+var navlink3 = document.getElementById("nav-link3");
+var News = document.getElementById("News");
+var crowdsourcing = document.getElementById("crowdsourcing");
+var fadein = document.getElementById("fadein");
+var Analytics = document.getElementById("Analytics");
+
+navlink1.addEventListener("click", ()=>{
+  document.getElementById("fadein").style.display = "none";
+  News.style.display="block";
+  crowdsourcing.style.display="none";
+  Analytics.style.display="none";
+});
+
+navlink2.addEventListener("click", ()=>{
+  document.getElementById("fadein").style.display = "none";
+  News.style.display="none";
+  crowdsourcing.style.display="block";
+  Analytics.style.display="none";
+});
+
+navlink3.addEventListener("click", ()=>{
+  document.getElementById("fadein").style.display = "none";
+  News.style.display="none";
+  crowdsourcing.style.display="none";
+  Analytics.style.display="block";
+});
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 60.169856, lng: 24.938379},
@@ -38,3 +63,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+

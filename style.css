@@ -6,7 +6,23 @@
     background-color: #e84c13;
 }
 
-#map {
+#fadein {
     display: none;
+    margin-top: 10%;
+}
+
+#map {
     margin-top: 5%;
+}
+
+#Analytics {
+    display: none;
+}
+
+#News {
+    display: none;
+}
+
+#crowdsourcing {
+    display: none;
 }
