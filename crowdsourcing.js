@@ -12,3 +12,8 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+
+
+
+
