@@ -13,7 +13,3 @@ function readURL(input) {
     }
 }
 
-
-
-
-
